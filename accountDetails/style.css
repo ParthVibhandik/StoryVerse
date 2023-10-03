@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+#back-btn {
+    margin: 20px;
+    position: absolute;
+}
+
+.profile-link {
+    border: 3px solid #797979;
+}
+.profile-link:hover {
+    border: 1px solid #797979;
+}
+
+.user-details {
+    display: flex;
+    height: 85vh;
+}
+
+.left-container {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.profile-pic-container {
+    position: relative;
+}
+
+#change-pic-btn {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('Assets/Ui/editInterest.png');
+    background-size: cover;
+}
+
+.profile-pic {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #000;
+    border-radius: 75px;
+}
+
+.user-name {
+    margin-top: 50px;
+}
+
+.user-username {
+    margin-top: 30px;
+    color: #a5a5a5;
+}
+
+.user-id {
+    margin-top: 5px;
+    color: #a5a5a5;
+}
+
+.user-follow-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 150px;
+}
+
+.details-ui {
+    margin-top: 30px;
+}
+.details-ui div {
+    margin-top: 20px;
+    text-align: left;
+    cursor: pointer;
+}
+.details-ui button {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: #00000000;
+}
+
+.follow-in-left-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.follow-user-btn {
+    padding: 2px 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.follow-active {
+    background-color: rgb(58, 191, 243);
+}
+.follow-inactive {
+    background-color: rgb(208, 208, 208);
+}
+
+.remove-follower-btn {
+    padding: 2px 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(208, 208, 208);
+}
+
+.right-container {
+    width: 100vw;
+}
+
+.about-interest-container {
+    background-color: #fff;
+    box-shadow: 0 0 5px #b1b1b186;
+    border-radius: 15px;
+    margin: 10px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.about {
+    padding: 20px;
+}
+.about a {
+    color: #000;
+    text-decoration: none;
+}
+.about a:hover {
+    text-decoration: underline;
+}
+
+.about .label,
+.interest .label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.interest {
+    border-top: 1px solid #f1f1f1;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#add-interest {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    top: 4px;
+    left: 10px;
+    cursor: pointer;
+    background-image: url("Assets/Ui/editInterest.png");
+    background-size: contain;
+}
+#add-interest:hover::after {
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.created-contributed-container {
+    background-color: #fff;
+    box-shadow: 0 0 5px #b1b1b186;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;   
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+}
+.tabs div {
+    margin-left: 10px;
+}
+  
+.tab {
+    cursor: pointer;
+    padding: 10px 20px; 
+}
+
+.created,
+.contributed,
+.following-story {
+    display: flex;
+    margin-top: 10px;
+    transition: .1s ease;
+}
+
+.amt {
+    display: flex;
+    align-items: center;
+}
+  
+.tab.selected {
+    border-bottom: 2px solid blue;
+}
+  
+.tab-content {
+    margin-top: 10px;
+    max-height: 38vh;
+    overflow-y: scroll;
+}
+
+/* Styling the edit profile section */
+.edit-fields {
+    margin-top: 25px;
+    margin-left: 3px;
+}
+
+.edit-fields div {
+    background-color: #fff;
+    box-shadow: 0 0 5px #b1b1b186;
+    border-radius: 15px;
+    margin: 12px;
+    padding: 11px;
+}
+
+.edit-profile-container label {
+    margin-right: 50px;
+    margin-left: 20px;
+}
+
+#about-field {
+    width: 70%;
+}
+
+.edit-profile-container input {
+    border: none;
+    height: 40px;
+    min-width: 300px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.edit-ui {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.edit-ui button {
+    margin: 0 10px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.edit-unclickable {
+    background-color: #dedede;    
+}
+.edit-clickable {
+    background-color: rgb(255, 154, 154);    
+}
+
+
+/* Media query for portrait devices (max-width: 768px) */
+@media (max-width: 999px) {
+    .user-details {
+        flex-direction: column; /* Stack containers for portrait */
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%; /* Take full width on portrait */
+    }
+
+    .created-contributed-container {
+        height: auto;
+    }
+
+    .profile-pic {
+        margin-top: 50px;
+    }
+
+    .details-ui div {
+        text-align: center;
+    }
+}
+
+/* Media query for landscape devices (min-width: 769px) */
+@media (min-width: 1000px) {
+    .user-details {
+        flex-direction: row; /* Side by side containers for landscape */
+    }
+
+    .left-container {
+        width: 30%;
+    }
+
+    .right-container {
+        width: 70%;
+    }
+}
+
+/* Pop-up container styles */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 0 5px #b1b1b186;
+    width: 400px;
+    border-radius: 10px;
+}
+
+
+.following-list {
+    overflow: scroll;
+    max-height: 300px;
+}
+.following-list::-webkit-scrollbar {
+    display: none;
+}
+
+.popup-header {
+    text-align: center;
+    font-size: large;
+}
+
+.popup-content p {
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Close button styles */
+.close-button {
+    margin-top: 10px;
+    cursor: pointer;
+    padding-top: 15px;
+    color: #9e9d9d;
+    border-top: 1px solid #f1f1f1;
+    text-align: center;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+/* Follower/Following popup styles */
+
+/* Interest popup styles */
+#interest-popup{
+    width: 500px;
+}
+
+.all-interests,
+.display-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.interest-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px 8px 8px;
+    background-color: #e7e7e7;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#interest-status {
+    text-align: right;
+}
+
+.interest-pic {
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-right: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.interest-active {
+    background-color: rgb(58, 191, 243);
+}
+
+#confirm-delete-btn {
+    color: red;
+}
+
+/* Change pic popup styles */
+.current-pic-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.current-pic {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    border: 1px solid;
+    background-size: cover;
+}
+
+#photoUploadForm {
+    display: flex;
+    justify-content: space-around;
+}
+
+#edit-pic-input {
+    display: none;
+}
+
+#edit-pic-upload {
+    padding: 10px 20px;
+    background-color: #d8d8d8;
+    border-radius: 25px;
+    font-size: large;
+    border: none;
+}
+
+#label-edit-pic-input {
+    padding: 10px 20px;
+    background-color: #d8d8d8;
+    border-radius: 25px;
+    font-size: large;
+}
+
+.background-foreground {
+    height: 150px;
+}
+
+#background-container,
+#foreground-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 1;
+    justify-content: center;
+    margin: 20px;
+}
+
+#background-container div,
+#foreground-container div {
+    height: 35px;
+    width: 35px;
+    border-radius: 17.5px;
+    margin: 5px 10px;
+}
+#background-container div:hover,
+#foreground-container div:hover {
+    border: 5px solid #00000020;
+}
+
+.background-foreground-ui {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 50px;
+    color: #b7b7b7;
+}
+
+#edit-pic-color-picker {
+    height: 100%;
+    width: 100%;
+    border-radius: 17.5px;
+    background-color: #fff;
+    border: none;
+}
+
+.bg-fg-ui-clickable {
+    color: blue;
+}
+
+#foreground-container div {
+    background-size: 300%;
+    background-position: center;
+}

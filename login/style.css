@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script';
+}
+
+section {
+    height: 100vh;
+    width: 100vw;    
+}
+
+.signup-login-container {
+    background-size: cover;
+    background-position: center;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.signup-login-container img{
+    height: 40px;
+    margin: -5px 0;
+}
+
+#scroll-up {
+    margin-top: 135px;
+    width: 520px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scroll-down {
+    margin-bottom: 135px;
+    width: 520px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scroll-paper {
+    background-image: url("Assets/scrollPaper.png");
+    background-size: cover;
+    height: 18px;
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.login, .signup, .nameInput {
+    display: none;
+    opacity: 0;
+}
+
+.login-form div, .signup-form div, .nameInput div {
+    margin-top: 10px;
+}
+
+.login input, .signup input, .nameInput input {
+    width: 200px;
+    background: #00000000;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.login input:active,
+.login input:focus,
+.signup input:active,
+.signup input:focus,
+.nameInput input:active,
+.nameInput input:focus {
+    outline: none;
+}
+
+#status-login {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#post-login p {
+    position: relative;
+    top: -27.5px;
+}
+
+#post-signup p,
+#next-signup-name p {
+    position: relative;
+    top: -27.5px;
+}
+
+#post-signup,
+#next-signup-name {
+    margin-top: 30px;
+}
+
+.password-guidelines {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    width: 200px;
+}
+
+#signup-open, #login-repen, #next-signup-name{
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#status-signup, #status-login, #status-name{
+    color: red;
+}

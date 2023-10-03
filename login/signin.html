@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <section class="signup-login-container" id="signup-login-container">
+
+        <div class="scroll">
+
+            <div>
+                <img src="Assets/scrollUp.png" id="scroll-up">
+            </div>
+
+            <div id="scroll-paper">
+                <div class="login">                    
+                    <form class="login-form">
+                        <h1>LOGIN</h1>
+                        <div class="login-form-fields">
+                            <input type="text" placeholder="Username" name="username" id="username-login">
+                            <br><br>
+                            <input type="password" placeholder="Password" name="password" id="password-login">
+                        </div>
+                        <div id="status-login"></div>
+                        <div class="post-ui">
+                            <div id="post-login">
+                                <img src="Assets/scrollButton.png">
+                                <p id="p" style="cursor: pointer;">SUBMIT</p>                                
+                            </div>
+                            <span id="signup-open">Create Account</span>
+                        </div>                                                                        
+                    </form>
+                </div>
+
+                <div class="signup">
+                    <form>
+                        <h1>SIGNUP</h1>
+                        <br>
+                        <input type="text" placeholder="Create Username" name="username" id="username-signup">
+                        <br><br>
+                        <input type="password" placeholder="Create Password" name="password" id="password-signup">
+                        <br><br>
+                        <div id="status-signup">
+                            <div class="password-guidelines"></div>
+                        </div>
+                        <div id="login-repen">Login Instead</div>
+                    </form>
+                </div>
+
+                <div class="nameInput">
+                    <form>
+                        <!-- <h1>SIGNUP</h1>
+                        <br> -->
+                        <input type="text" placeholder="Name" name="username" id="name">
+                        <br><br>
+                        <input type="text" placeholder="Email" name="password" id="email">
+                        <br><br>
+                        <div id="status-name">
+                            <div class="name-guidelines"></div>
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <!-- profile photos-->
+            </div>
+            
+            <div>
+                <img src="Assets/scrollDown.png" id="scroll-down">
+            </div>
+        </div>
+
+    </section>
+
+    
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+<script src="gsap.js"></script>
+<script src="script.js"></script>
+</html>
